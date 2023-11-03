@@ -616,6 +616,84 @@ footer .errorMessage {
     margin: 0 0 20px 15px;
   }
 }
+#categories-container {
+  margin-top: 80px;
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.viewport {
+  display: flex;
+  overflow: hidden;
+}
+
+.categories-container {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.h1-cat {
+  margin-bottom: 20px;
+}
+
+.category {
+  flex: 0 0 auto;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 5px;
+  width: 300px;
+  height: 150px;
+}
+
+.category img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 10px;
+  background-color: #a5a5a5;
+  color: white;
+  border: none;
+  z-index: 2;
+}
+
+.next-button {
+  right: 0;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #555;
+}
+
+.cat-title {
+  width: 90%;
+  height: 70px;
+  background-color: #28427B;
+  color: #EDF2F4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centr-cat {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
 #cart {
   width: 100%;
   min-height: calc(100vh - 120px);
