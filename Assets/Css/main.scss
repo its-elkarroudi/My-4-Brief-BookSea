@@ -8,10 +8,13 @@
 @use '../Css/Css-pages/Home';
 
 // IMPORT PRODUCTS PAGE CSS
-@use '../Css/Css-pages/Products';
-
-// IMPORT CONTACT US PAGE CSS
-@use '../Css/Css-pages/Contact-Us';
+@use '../Css/Css-pages/Product';
 
 // IMPORT CATEGORIES PAGE CSS
-@use '../Css/Css-pages/Categories';
+@use '../Css/Css-pages/Category';
+
+// IMPORT CART PAGE CSS
+@use '../Css/Css-pages/Cart';
+
+// IMPORT CHECKOUT PAGE CSS
+@use '../Css/Css-pages/checkout';
