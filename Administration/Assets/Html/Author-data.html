@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- CSS LINKS -->
-    <link rel="stylesheet" href="../Css/Admin.css">
+    <link rel="stylesheet" href="../Css/Main.css">
 
     <title>Adm - Author</title>
 </head>
@@ -44,9 +44,9 @@
                 </div>
 
                 <!-- AUTHOR DATA TABLE INFO -->
-                <div class="Author-container">
+                <div class="Author-container" id="Author-container">
                     <!-- DIV WHERE AUTHOR INFORMATION ARE DISPLAYED -->
-                    <div class="Author">
+                    <!-- <div class="Author">
                         <h3>01</h3>
                         <h3>Author Name Here</h3>
                         <h3>Speciality</h3>
@@ -54,9 +54,12 @@
                             <button class="sp-btn delete">Delete</button>
                             <button class="sp-btn modify_Author_btn">Modify</button>
                         </h3>
-                    </div>
+                    </div> -->
 
-                    <!-- WHERE OTHER AUTHOR WILL BE DISPLAYED -->
+                    <!-- DIV WHERE AUTHOR INFORMATION ARE DISPLAYED -->
+                   
+
+                    <!-- WHERE OTHER AUTHOR WILL BE DISPLAYED QQ-->
                     
                 </div>
 
@@ -83,12 +86,15 @@
             <input type="text" placeholder="Author Name" id="Author-name" name="Author-name" class="" >
             <div class="errorMessage"></div>
 
-            <input type="text" placeholder="Author Speciality" id="Author-speciality" name="Auhtor-speciality" class="">
+            <input type="text" placeholder="Author Speciality" id="Author-speciality" name="Author-speciality" class="">
             <div class="errorMessage">
                 <p id="errorMessage" style="color: white; font-weight: 600;"></p>
             </div>
+            <div class="validation-msg">
+                <p id="authorValidation" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
+            </div>
 
-            <button class="sp-btn-reverse" type="submit">Save Details</button>
+            <button class="sp-btn-reverse" id="addAuthorBtn">Save Details</button>
         </form>
     </section>
 
@@ -105,18 +111,20 @@
         </div>
 
         <!-- FORM ============ -->
-        <form id="modify-form">
-            <input type="text" value="01" name="category-id" readonly style="background-color: #ddd;">
+        <form  id="modify-form">
+            <input type="text"  name="category-id" id="authorId" readonly style="background-color: #ddd;">
 
-            <input type="text" value="Author Name" id="Auhtor-name" name="Author-name" class="" >
+            <input type="text"  id="authorName" name="Author-name" class="" >
             <div class="errorMessage"></div>
 
-            <input type="text" value="Author Speciality" id="Auhtor-speciality" name="Auhtor-speciality" class="">
+            <input type="text"  id="Speciality" name="Auhtor-speciality" class="">
             <div class="errorMessage">
                 <p id="errorMessage" style="color: white; font-weight: 600;"></p>
             </div>
-
-            <button class="sp-btn-reverse" type="submit">Save Details</button>
+            <div class="validation-msg">
+                <p id="authorValidation2" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
+            </div>
+            <button class="sp-btn-reverse" id="modifyAuthBtn">Save Details</button>
         </form>
     </section>
 
@@ -124,14 +132,19 @@
 
 
 
-    <!-- MESSAGE TO DISPLAY WHEN THERE IS NO AUTHOR -->
+
     <section>
         <div class="container">
-            <h1 id="empty_Author">There Is No Author</h1>
+            <h1 id="empty_Author"></h1>
         </div>
     </section>
 
-    <script src="../Js/Author.js"></script>
 
+
+
+    <script src="../../../javascript/Author.js"></script>
+    <script src="../../../javascript/authors.js"></script>
+     
+    
 </body>
 </html>

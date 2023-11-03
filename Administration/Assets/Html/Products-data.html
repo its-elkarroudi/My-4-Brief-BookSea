@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- CSS LINKS -->
-    <link rel="stylesheet" href="../Css/Admin.css">
+    <link rel="stylesheet" href="../Css/Main.css">
 
     <title>Adm - Products</title>
 </head>
@@ -30,10 +30,7 @@
                 
             </div>
 
-            <!-- PRODUCTS DATA SECTION -->
             <div class="products-section">
-
-                <!-- PRODUCTS DATA TABLE HEAD -->
                 <div class="product-table-head">
                     <h3>ID</h3>
                     <h3>Title</h3>
@@ -41,11 +38,8 @@
                     <h3>Quantity</h3>
                     <h3>Action</h3>
                 </div>
-
-                <!-- PRODUCTS DATA TABLE INFO -->
-                <div class="products-container">
-                    <!-- DIV WHERE PRODUCTS INFORMATION ARE DISPLAYED -->
-                    <div class="product">
+                <div class="products-container"  id="products-container">
+                    <!-- <div class="product">
                         <h3>01</h3>
                         <h3>Product Name Here</h3>
                         <h3>150 Dh</h3>
@@ -54,10 +48,8 @@
                             <button class="sp-btn delete">Delete</button>
                             <button class="sp-btn modify_Category_btn">Modify</button>
                         </h3>
-                    </div>
-
-                    <!-- WHERE OTHER PRODUCTS WILL BE DISPLAYED -->
-
+                    </div> -->
+ 
                 </div>
 
             </div>
@@ -75,10 +67,12 @@
         </div>
 
         <!-- FORM ============ -->
-        <form id="addBookForm">
+        <form id="addBookForm" class="addBookForm">
 
                 <input type="text" value="01"   style="background-color: #eaeaea;" readonly>
-                <div class="errorMessage"></div>
+                <div class="errorMessage">
+                
+                </div>
 
                 <input type="text" placeholder="ISBN" id="bookIsbn"  class="" >
                 <div class="errorMessage">
@@ -114,6 +108,9 @@
                 <div class="errorMessage">
                     <p id="imgError"></p>
                 </div>
+                <div class="validation-msg">
+                    <p id="validation" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
+                </div>
 
 
             <button class="sp-btn-reverse" id="btn-submit">Save Details</button>
@@ -137,30 +134,30 @@
         <!-- FORM ============ -->
         <form id="editBookForm">
 
-                <input type="text" value="01" name="book-id"  style="background-color: #eaeaea;" readonly>
+                <input type="text" name="book-id" id="book-id"  style="background-color: #eaeaea;" readonly>
                 <div class="errorMessage"></div>
 
-                <input type="text" value="1577 6684 2684 3674"  id="bookIsbn2"  name="book_isbn" class="" >
+                <input type="text"   id="bookIsbn2"  name="book_isbn" class="" >
                 <div class="errorMessage">
                     <p id="isbnError2"></p>
                 </div>
 
-                <input type="text" value="Product Name Here" id="bookTitle2" name="book_name" class="" >
+                <input type="text" id="bookTitle2" name="book_name" class="" >
                 <div class="errorMessage">
                     <p id="titleError2"></p>
                 </div>
 
-                <input type="text" value="150 Dh"  id="bookPrice2" name="book_price" class="" >
+                <input type="text"  id="bookPrice2" name="book_price" class="" >
                 <div class="errorMessage">
                     <p id="priceError2"></p>
                 </div>
 
-                <input type="text" value="19" id="bookQuantity2" name="book_stock" class="" >
+                <input type="text"  id="bookQuantity2" name="book_stock" class="" >
                 <div class="errorMessage">
                     <p id="quantityError2"></p>
                 </div>
 
-                <input type="text" value="Author Name" id="bookAuthor2"  name="book_author" class="" >
+                <input type="text"  id="bookAuthor2"  name="book_author" class="" >
                 <div class="errorMessage">
                     <p id="authorError2"></p>
                 </div>  
@@ -174,22 +171,24 @@
                 <div class="errorMessage">
                     <p id="imgError2"></p>
                 </div>
+                <div class="validation-msg">
+                    <p id="validation2" style="color: Black; font-weight: 600; margin-bottom: 0.5rem;"></p>
+                </div>
 
 
-            <button class="sp-btn-reverse">Save Details</button>
+            <button class="sp-btn-reverse" id="editBookBtn">Save Details</button>
         </form>
     </section>
 
-
-
-    <!-- MESSAGE TO DISPLAY WHEN THERE IS NO PRODUCTS -->
     <section>
         <div class="container">
-            <h1 id="book_empty">There Is No Book</h1>
+            <h1 id="book_empty"></h1>
         </div>
     </section>
 
-    <script src="../Js/Products.js"></script>
+    <script src="../../../javascript/bookValidation.js"></script>
+    <script src="../Js/Por-fonctionalite.js"></script>
+    <script src="../../../javascript/models.js"></script>
     
 </body>
 </html>
